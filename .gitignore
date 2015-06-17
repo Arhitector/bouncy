@@ -1,0 +1,46 @@
+#
+# Mac OS
+#
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+
+#
+# Windows
+#
+ehthumbs.db
+Thumbs.db
+
+#
+# IDE
+#
+/.idea
+/*.iml
+
+#
+# Local installation
+#
+/bower_components/*
+/node_modules/*
+
+#
+# Logs
+#
+npm-debug.log
+
+#
+# Cache & temp
+#
+.sass-cache/*
+
+#
+# Local environment
+#
+/src/styles/sprites/*
+/www/*
+/prod/*
+/nbproject
+/nbproject/private/
+/tests
+/temp
