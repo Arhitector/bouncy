@@ -6,7 +6,7 @@ global.gulpSequence = require('gulp-sequence');
 global.glob 		= require('glob');
 global.path 		= require('path');
 global.fs 			= require('fs');
-global.rimraf 		= require('rimraf');
+global.rimraf 		= require('gulp-rimraf');
 global.foreach 		= require('gulp-foreach');
 global.gulpIf 		= require('gulp-if');
 global.noop			= require('gulp-util').noop;
@@ -70,7 +70,15 @@ gulp.task('cleanDest', function () {
 	return gulp.src([cfg.dest.root, cfg.src.styles + '/sprites'], {read: false}).pipe(rimraf());
 });
 gulp.task('cleanAll', function () {
-	return gulp.src(['bower_components', '.sass-cache', 'temp', 'test', 'node_modules', cfg.dest.root, cfg.src.styles + '/sprites',], {read: false}).pipe(rimraf());
+	return gulp.src([
+		'bower_components',
+		'.sass-cache',
+		'temp',
+		'test',
+		'node_modules',
+		cfg.dest.root,
+		cfg.src.styles + '/sprites'
+	], {read: false}).pipe(rimraf());
 	gulp.start('cleanCache');
 });
 gulp.task('fonts', function () {

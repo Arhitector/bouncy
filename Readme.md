@@ -1,18 +1,3 @@
-need to do:
-- change watch task(chokidar)
-- base64 option doesn't work
-- Qunit test
-- yomen
-- themeth
-- cloudinary
-- smart linters (js, styles, html templates)
-- data outside modules
-
-
-# JS conventions
-- avoid storing js state in css class - use data attributes
-
-
 #IMPORTANT
 for using project have to install globaly:
 - node.js
