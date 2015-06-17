@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+export PATH=/usr/local/bin:$PATH
+if git diff --cached --name-only --diff-filter=ACM >/dev/null 2>&1
+then
+  ./node_modules/.bin/gulp pre-commit
+fi
+
+exit $?

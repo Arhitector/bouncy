@@ -1,0 +1,11 @@
+head
+	title #{pageTitle}
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	link(rel="stylesheet" href="#{cssPath}/all.min.css")
+	script.
+		var env = '#{env}';
+	if isProd
+		script(src="#{jsBundlePath}")
+	else
+		script(src="/node_modules/steal/steal.js")
