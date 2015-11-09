@@ -1,15 +1,9 @@
-// TODO. should be added by yeoman
-include ../blocks/cloudinary/cloudinary
-
 <!DOCTYPE html>
-html(lang="en")
+html(lang="en" ng-app="bouncyApp")
 	include ./head.jade
 	block head
 	body
 		.wrapper
-			header.header
-				include ../modules/header/header.jade
-				block header
 			main.content
 				block content
 		footer.footer

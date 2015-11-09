@@ -1,12 +1,14 @@
 module.exports = new function () {
 	// Template variables
 	cfg.destTemplate = {
-		'pageTitle': 'Omnigon',
+		'root' : '../' + cfg.src.root,
+		'pageTitle': 'Bouncy',
 		'cssPath': 'css',
-		'imgPath': 'img',
+		'imgPath': '../' + cfg.src.img,
 		'jsPath': 'js',
-		'tempPath': 'img',
-		'imageSprites': 'img',
-		'defaultPlaceholder': cfg.src.img + '/placeholder.png'
+		'tempPath': '../' + cfg.src.tempImg,
+		'imageSprites': '../' + cfg.src.sprites,
+		'blocksPath': '../' + cfg.src.blocks,
+		'modulePath': '../' + cfg.src.modules
 	};
 }

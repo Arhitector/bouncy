@@ -17,7 +17,7 @@ module.exports = new function () {
 			return this.img + '/dataUri';
 		},
 		get styles() {
-			return this.root + '/styles/' + cfg.cssBuilder;
+			return this.root + '/styles/';
 		},
 		get scripts() {
 			return this.root + '/scripts';

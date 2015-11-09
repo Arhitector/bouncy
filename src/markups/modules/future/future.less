@@ -1,0 +1,136 @@
+.m-future {
+	display: flex;
+	flex-direction: column;
+	padding: 74px 0 0;
+	.g-title {
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		display: flex;
+		flex: 1;
+		padding-bottom: 57px;
+	}
+	.b-media {
+		display: flex;
+		flex-direction: row;
+		align-content: stretch;
+		height: 319px;
+		transition: all 400ms;
+		overflow: hidden;
+		max-width: 1367px;
+		margin: 0 auto;
+		&__item {
+			position: relative;
+			overflow: hidden;
+			flex-grow: 1;
+			transition: flex-grow 500ms;
+			&__img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				max-width: none;
+				height: 100%;
+				transition: all 400ms;
+				transform: translate(-50%, -50%) scale(1);
+			}
+			&__text {
+				color: #fff;
+				.font-SS();
+				font-size: 20px;
+				.center(absolute);
+				z-index: 200;
+				text-transform: uppercase;
+				letter-spacing: 1.8px;
+				opacity: 1;
+				transition: opacity 500ms;
+			}
+			&:hover, &.hover {
+				transition: flex-grow 500ms;
+				flex-grow: 2;
+				.b-media__item {
+					&__img {
+						transition: all 400ms;
+						transform: translate(-50%, -50%) scale(1.2);
+					}
+					&__text {
+						opacity: 0;
+						transition: opacity 500ms;
+					}
+				}
+				&:after {
+					transition: all 400ms;
+					background-color: rgba(0, 0, 0, 0.0);
+				}
+			}
+			&:after {
+				content: "";
+				transition: all 400ms;
+				position: absolute;
+				background-color: rgba(0, 0, 0, .85);
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 100;
+			}
+		}
+		&:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+	}
+	.b-bottom {
+		&:extend(.helper-bg-fixed-theme);
+		background-image: url('@{modules-path}/future/images/bottom.jpg');
+		position: relative;
+		height: 112px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 0 7.5%;
+		&__text {
+			&:extend(.m-future .helper-bottom);
+			font-size: 20px;
+			letter-spacing: 0.9px;
+		}
+		&__button {
+			min-width: 91px;
+			white-space: nowrap;
+			&:extend(.m-future .helper-bottom);
+			&:extend(.button);
+		}
+	}
+	&__box {
+		flex: 0;
+		background-color: @dark-color;
+	}
+	.helper-bottom {
+		position: relative;
+		display: inline-block;
+		z-index: 100;
+		color: @light-color;
+	}
+	@media (max-width: @middle-max-width) {
+		.b-media {
+			height: 450px;
+			flex-direction: column;
+			&__item {
+				&__img {
+					height: auto;
+					min-width: 100%;
+					min-height: 100%;
+				}
+			}
+		}
+		.b-bottom {
+			padding: 15px 15px;
+			height: auto;
+			text-align: center;
+			flex-direction: column;
+			&__text {
+				padding-bottom: 15px;
+			}
+		}
+	}
+}

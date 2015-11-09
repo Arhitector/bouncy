@@ -1,0 +1,4 @@
+#scroll.g-scroll(scroll ng-controller="scrollCtrl" ng-class="{'js-top-position' : topPosScroll, 'js-scrolling' : centerScroll, 'js-bottom-position' : bottomScroll}")
+	span.g-scroll__down(ng-click="scrollDown()" )
+	span.g-scroll__up(ng-click="scrollUp()" )
+	script(src='#{blocksPath}/scroll/scroll.js')

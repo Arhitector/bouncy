@@ -1,0 +1,34 @@
+{
+  "title": "Our Services",
+  "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+  "items":{
+	"tools": {
+	  "title": "Using Tools",
+	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
+	  "branding": "70",
+	  "webDesign": "48",
+	  "uiUx": "90"
+	},
+	"paint": {
+	  "title": "Graphic Design",
+	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
+	  "branding": "60",
+	  "webDesign": "75",
+	  "uiUx": "86"
+	},
+	"game": {
+	  "title": "Modern Featchers",
+	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
+	  "branding": "38",
+	  "webDesign": "94",
+	  "uiUx": "82"
+	},
+	"set": {
+	  "title": "Our technick",
+	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
+	  "branding": "67",
+	  "webDesign": "87",
+	  "uiUx": "97"
+	}
+  }
+}

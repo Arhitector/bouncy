@@ -1,0 +1,28 @@
+.m-maps#maps
+	.m-maps__text find us on the map
+	#mapsContainer
+	script(src="https://maps.googleapis.com/maps/api/js")
+	script.
+		var positionOnMap = new google.maps.LatLng(37.987589, -0.665476);
+		function initialize() {
+			var mapCanvas = document.getElementById('mapsContainer');
+			var mapOptions = {
+				center: positionOnMap,
+				zoom: 17,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+		var contentString = '<div id="mapsContent">some contetn</div>';
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+		var marker = new google.maps.Marker({
+			position: positionOnMap,
+			title: 'Uluru (Ayers Rock)'
+		});
+		google.maps.event.addListener(marker, 'click', function () {
+			infowindow.open(map, marker);
+		});

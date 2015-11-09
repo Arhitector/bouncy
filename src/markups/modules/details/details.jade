@@ -1,0 +1,13 @@
+include ../../blocks/title/title
+section.m-details#m-details(ng-controller="datailsCtrl")
+	.l-details()
+		+title()
+		.m-details__list
+			.b-heart(ng-click='switchContent(["items","heart"])' ng-class='{active : isSelected(section)}' )
+			.b-mouse(ng-click='switchContent(["items","mouse"])' ng-class='{active : isSelected(section)}' )
+			.b-bulb(ng-click='switchContent(["items","bulb"])' )
+		.b-description(ng-class="{animate : startAnimation}")
+			.b-description__title(ng-bind="contentData.title")
+			.b-description__small-text(ng-bind="contentData.small")
+			.b-description__big-text(ng-bind="contentData.full")
+script(src='modules/details/details.js')

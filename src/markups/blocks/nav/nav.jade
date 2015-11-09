@@ -1,0 +1,8 @@
+mixin nav (nav)
+
+	nav.g-nav(ng-controller="navCtrl")
+		.g-nav__mobile(ng-click="openMenu()" ng-class="{active : isActive}")
+			.g-nav__mobile__hamburger
+		.g-nav__list
+			a(ng-repeat="item in navJsonData.navigation" ng-bind="item.title" href="{{item.link}}" title="").g-nav__list__item
+	script(src="../src/markups/blocks/nav/nav.js")

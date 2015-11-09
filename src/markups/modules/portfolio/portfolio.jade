@@ -1,0 +1,33 @@
+include ../../blocks/title/title
+section.m-portfolio#m-portfolio
+	.l-portfolio
+		-var title = {title: 'THE PORTFOLIO', subtitle: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}
+		+title(title)
+		.b-filter
+			.b-filter__envelope
+				.b-item.active all works
+				.b-item print
+				.b-item Identity
+				.b-item Branding
+				.b-item Web
+				.b-item HTML
+				.b-item Wordpress
+		.b-works
+			each item in data.portfolio
+				.b-works__item
+					.b-media
+						img(src='#{item.img}' alt='').b-media__img
+					.b-tip
+						.b-tip__title #{item.title}
+						.b-tip__discription #{item.discription}
+						.b-tip__link #{item.link}
+						.b-tip__like
+
+		.b-footer
+			.b-footer__text
+				|At vero eos et
+				b accusamus
+				|et iusto odio
+				b dignissimos
+				|ducimus qui blanditiis
+			.b-footer__button start project

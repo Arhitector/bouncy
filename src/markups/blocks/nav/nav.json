@@ -1,0 +1,11 @@
+{
+  "navigation": [
+	{"title":"Hello", "link": "#m-top"},
+	{"title":"About", "link": "#m-details"},
+	{"title":"services", "link": "#m-services"},
+	{"title":"portfolio", "link": "#m-portfolio"},
+	{"title":"team", "link": "#m-team"},
+	{"title":"blog", "link": "#m-latest-news"},
+	{"title":"contact", "link": "#m-contact"}
+  ]
+}

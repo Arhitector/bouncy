@@ -1,0 +1,25 @@
+include ../../blocks/nav/nav.jade
+section.m-top#m-top(ng-controller="topCtrl")
+	picture.m-top__background
+		source(
+			media="(max-width: 480px)"
+			srcset="#{modulePath}/top/images/top-bg_480.jpg"
+		)
+		source(
+			media="(max-width: 768px)"
+			srcset="#{modulePath}/top/images/top-bg_768.jpg"
+		)
+		source(
+			media="(max-width: 1024px)"
+			srcset="#{modulePath}/top/images/top-bg_1024.jpg"
+		)
+		img(
+			src="#{modulePath}/top/images/top-bg.jpg"
+			alt="a cute kitten"
+		)
+	+nav()
+	a(href="javascript:void(0);" title="").m-top__logo bouncy
+	.m-top__box
+		.m-top__box__title(ng-bind="topJsonData.title")
+		.m-top__box__text(ng-bind="topJsonData.description")
+script(src="../src/markups/modules/top/top.js")

@@ -1,0 +1,18 @@
+include ../../blocks/title/title
+section.m-future(ng-controller="futureCtrl")
+	+title()
+	.m-future__box
+		.b-media
+			.b-media__item
+				img(src='#{modulePath}/future/images/content1.jpg' alt='').b-media__item__img
+				.b-media__item__text retro
+			.b-media__item
+				.b-media__item__text vintage
+				img(src='#{modulePath}/future/images/content2.jpg' alt='').b-media__item__img
+			.b-media__item
+				.b-media__item__text branding
+				img(src='#{modulePath}/future/images/content3.jpg' alt='').b-media__item__img
+		.b-bottom
+			.b-bottom__text(ng-bind="futureData.bottomText")
+			.b-bottom__button(ng-bind="futureData.readMeText")
+script(src='modules/future/future.js')

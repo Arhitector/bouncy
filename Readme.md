@@ -26,3 +26,49 @@ all vendor's stuff should be in dev dependencies
 - check console for errors
 - make shure that all main library was instaled (see "important" point)
 - reinstall all packages by command npm install
+
+
+
+
+- in top module centered by translate
+- hamburger animation
+- picture
+- mix-blend-mode
+- background-blend-mode
+- hover effect menu for mobile
+- buttons top/down scroll to 1 viewport
+- flex element
+- vw vh
+- filter grayscale
+- column
+- invalid
+- svg icon
+
+
+- canvas
+- css animation
+- 3d transformation
+- XPath
+- object-fit
+
+gulp
+- PurifyCSS
+- https://github.com/addyosmani/critical
+- gulp-webp
+- http://vanamco.com/ghostlab/
+- postcss
+- Picturefill
+- bower переделать
+- yomen
+- responsive img
+- клиенкие UI tests
+- pre-commit
+- удаленный доступ к gulp tasks
+- haml
+
+
+- http://mootools.net/core/builder
+- https://developer.mozilla.org
+- http://paperjs.org/   ---  svg library
+
+при создании less не билдит

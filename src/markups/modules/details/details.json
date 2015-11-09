@@ -1,0 +1,21 @@
+{
+  "title": "DetailS ABOUT BOUNCY",
+  "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+  "items": {
+	"heart": {
+	  "title": "Creative Ideas",
+	  "small": "At <a href='#' title=''>vero</a> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+	  "full": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias <a href='#' title=''>excepturi</a> sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem"
+	},
+	"mouse": {
+	  "title": "Using Technologies",
+	  "small": "At <a href='#' title=''>vero</a> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+	  "full": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias <a href='#' title=''>excepturi</a> sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem"
+	},
+	"bulb": {
+	  "title": "Brainstorm",
+	  "small": "At <a href='#' title=''>vero</a> eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores",
+	  "full": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias <a href='#' title=''>excepturi</a> sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem"
+	}
+  }
+}

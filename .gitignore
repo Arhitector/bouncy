@@ -44,3 +44,6 @@ npm-debug.log
 /nbproject/private/
 /tests
 /temp
+*.psd
+*.cache
+*.sublime-project

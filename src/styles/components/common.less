@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@arial: Arial, Helvetica, sans-serif;
+.font-R () {
+	font-family: 'Roboto', sans-serif;
+}
+.font-M () {
+	font-family: "Myriad Pro";
+}
+.font-SS () {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.font-A () {
+	font-family: @arial;
+}
+
+.image--medium {
+	max-width: 400px;
+	max-height: 250px;
+}
+
+//- vertical align element
+.va {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+//- clear fix
+.clear {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+p {
+	margin: 0 0 26px;
+}
+.wrapper {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+.content {}
+.helper-title {
+	.font-SS();
+	color: #333b46;
+	font-size: 20px;
+	letter-spacing: 3.8px;
+	text-transform: uppercase;
+}
+.helper-section {
+	padding: 74px 0 100px;
+	background-color: @light-color2;
+}
+.helper-bg {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.helper-bg-fixed {
+	&:extend(.helper-bg);
+	background-color: rgba(0,0,0,0.8);
+	background-blend-mode: multiply;
+}
+.helper-bg-fixed-theme {
+	&:extend(.helper-bg);
+	background-color: @theme-color;
+	background-blend-mode: soft-light;
+}
+@media (max-width: @middle-max-width) {
+	.helper-section {
+		padding: 34px 0 50px;
+	}
+}

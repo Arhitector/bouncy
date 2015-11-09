@@ -1,0 +1,21 @@
+section.m-about#about(ng-controller="aboutCtrl")
+	.l-about
+		picture.m-about__media
+			source(
+			media="(max-width: 480px)"
+			srcset="#{modulePath}/about/images/tablet_480.png"
+			)
+			source(
+			media="(max-width: 768px)"
+			srcset="#{modulePath}/about/images/tablet_768.png"
+			)
+			img(
+			src="#{modulePath}/about/images/tablet.png"
+			alt="a cute kitten"
+			)
+		.b-description
+			.b-description__title(ng-bind="aboutData.title")
+			.b-description__text {{aboutData.text}}
+				span.b-more-text(ng-show="show") {{aboutData.textMore}}
+			span(ng-click="show=!show" ng-bind="!show ? 'Read more' : 'Hide more' ").b-description__more
+script(src="../src/markups/modules/about/about.js")

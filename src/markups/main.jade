@@ -1,0 +1,20 @@
+extends templates/base-template
+
+block content
+	include blocks/scroll/scroll
+	include modules/top/top
+	include modules/about/about
+	include modules/details/details
+	include modules/future/future
+	include modules/services/services
+	include modules/impresed/impresed
+	- var data = getData("modules/portfolio/portfolio.json");
+	include modules/portfolio/portfolio
+	include modules/team/team
+	include modules/testimonials/testimonials
+	include modules/latest-news/latest-news
+	include modules/price/price
+	include modules/subscribe/subscribe
+	include modules/contact/contact
+	include modules/feed-back/feed-back
+	include modules/maps/maps

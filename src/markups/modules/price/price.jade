@@ -1,0 +1,34 @@
+include ../../blocks/title/title
+section.m-price
+	.l-price
+		-var title = {title: 'Our price', subtitle: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}
+		+title(title)
+		.b-cost
+			.b-cost__item
+				.b-title PREMIUM
+				.b-description
+					.b-description__large $ 60
+					|Per Month
+			.b-cost__item
+				.b-title
+					|Let’s Start
+					svg.b-svg
+						//#{imgPath}
+						use(xlink:href="../src/images/common.svg#arrow")
+				.b-description
+					|Full Branding
+					br
+					|Project Management
+					br
+					|Unlimited Revisions
+					br
+					|24/7 h Service
+					br
+					|Free Domain
+					br
+					|Free Hosting
+			.b-cost__item
+				.b-title EXCLUSIVE
+				.b-description
+					.b-description__large $ 80
+					|Per Month

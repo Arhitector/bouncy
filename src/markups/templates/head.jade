@@ -3,9 +3,7 @@ head
 	meta(charset="utf-8")
 	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
 	link(rel="stylesheet" href="#{cssPath}/all.min.css")
-	script.
-		var env = '#{env}';
-	if isProd
-		script(src="#{jsBundlePath}")
-	else
-		script(src="/node_modules/steal/steal.js")
+	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")
+	script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js")
+	script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js")
+	script(src="../src/scripts/base.js")

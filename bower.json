@@ -2,17 +2,6 @@
   "name": "FrontEnd-Project-Gulp",
   "version": "1.0.0",
   "dependencies": {
-    "swiper": "~3.0.7",
-    "moment": "~2.10.3",
-    "cloudinary": "~1.0.24",
-    "jquery-ui": "~1.11.4"
-  },
-  "system": {
-    "paths": {
-	  "cloudinary/cloudinary": "./bower_components/cloudinary/js/jquery.cloudinary.js",
-	  "jquery.ui.widget": "./src/scripts/dummy.js",
-	  "jquery.iframe-transport": "./src/scripts/dummy.js",
-	  "jquery.fileupload": "./src/scripts/dummy.js"
-	}
+    "jquery": "latest"
   }
 }

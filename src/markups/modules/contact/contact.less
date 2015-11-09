@@ -1,0 +1,49 @@
+.m-contact {
+	&:extend(.helper-section);
+	&:extend(.helper-section2);
+	.l-contact {
+		max-width: 982px;
+		margin: 0 auto;
+	}
+	.g-title {
+		padding-bottom: 57px;
+	}
+	.b-service {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		&__item {
+			flex-basis: 287px;
+			margin: 0 10px 20px;
+			background-color: @light-color;
+			text-transform: uppercase;
+			text-align: center;
+			min-width: 287px;
+			padding-bottom: 24px;
+		}
+	}
+	.b-media {
+		max-width: 290px;
+		max-height: 146px;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 24px;
+		position: relative;
+	}
+	.b-svg {
+		.center(absolute);
+		max-width: 44px;
+		max-height: 44px;
+	}
+	.b-title {
+		letter-spacing: 0.8px;
+		font-size: 16px;
+		color: @text-color2;
+		padding-bottom: 16px;
+	}
+	.b-text {
+		color: @text-color;
+		line-height: 20px;
+		letter-spacing: 2px;
+	}
+}

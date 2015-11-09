@@ -1,0 +1,7 @@
+include ../../blocks/title/title
+section.m-subscribe
+	form.l-subscribe
+		-var title = {title: 'Subscribe us', subtitle: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}
+		+title(title)
+		input(type="email" name="email" id="email" value="" placeholder="Email Address").m-subscribe__input
+		input(type="submit" name="submit" value="submit").m-subscribe__submit

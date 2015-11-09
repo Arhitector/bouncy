@@ -1,42 +1,60 @@
-/**
- * TODO. cloudinary dependency should be added by yeoman
- */
-define(['scripts/config', 'jquery', 'can/construct/', 'scripts/device', 'cloudinary'], function (config, $, Construct, device, cloudinary) {
-	// private classes and functions
-	var Application = Construct.extend({
-		init: function () {
-			var document = $('html');
+var bouncyApp = angular.module("bouncyApp", []);
 
-			if (device.isMobile) {
-				document.addClass('mobile');
-			}
-			if (device.isTouch) {
-				document.addClass('touch');
-			}
-			/**
-			 * TODO. should be added by yeoman
-			 */
-			$('.cloudinary-image').each(function () {
-				var $img = $(this),
-					config = {},
-					width = parseInt($img.css('max-width')),
-					height = parseInt($img.css('max-height'));
+bouncyApp.controller("bouncyAppCtrl", function($scope, $http){
 
-				if (!isNaN(width)) {
-					config.width = width;
-				}
-				if (!isNaN(height)) {
-					config.height = height;
-				}
-				$img.cloudinary(config);
-			});
-		}
-	});
-
-	new Application();
-	return {
-		'device': device
-	};
 });
 
+bouncyApp.factory('jsonLoader', ['$http', '$q', function ($http, $q) {
+	return function (jsonPath) {
+		return $q(function(resolve, reject) {
+			$http.get(jsonPath)
+				.success(function (data) {
+					resolve(data);
+				})
+				.error(function (err) {
+					reject(err);
+				});
+		});
+	};
+}]);
 
+
+bouncyApp.factory('scrollPosition', function () {
+		var appHeight = $('body').height() - $(window).height();
+		return {
+			appHeight: function () {
+				return appHeight;
+			},
+			topPosition : function() {
+				return window.pageYOffset == 0 ? true : false;
+			},
+			bottomPosition : function() {
+
+				return window.pageYOffset >= appHeight ? true : false;
+			},
+			currentPosition: function () {
+				return window.pageYOffset;
+			},
+			viewportHeight: function () {
+				return $(window).height();
+			}
+		}
+	}
+);
+bouncyApp.directive("scroll", function ($window, scrollPosition) {
+	return function(scope, element, attrs) {
+		angular.element($window).bind("scroll", function() {
+			scope.topPosScroll = false;
+			scope.centerScroll = false;
+			scope.bottomScroll = false;
+			if (this.pageYOffset == 0) {
+				scope.topPosScroll = true
+			} else if (this.pageYOffset >= scrollPosition.appHeight()) {
+				scope.bottomScroll = true;
+			} else {
+				scope.centerScroll = true;
+			}
+			scope.$apply();
+		});
+	};
+});

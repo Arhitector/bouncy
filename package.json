@@ -79,5 +79,8 @@
     "configDependencies": [
       "./bower.json!bower"
     ]
+  },
+  "devDependencies": {
+    "main-bower-files": "^2.9.0"
   }
 }

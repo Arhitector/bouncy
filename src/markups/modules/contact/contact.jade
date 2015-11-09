@@ -1,0 +1,34 @@
+include ../../blocks/title/title
+section.m-contact#m-contact
+	.l-contact
+		-var title = {title: 'Contact us', subtitle: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}
+		+title(title)
+		.b-service
+			.b-service__item
+				.b-media
+					img(src='#{modulePath}/contact/images/item1.jpg' alt='').b-media__img
+					svg.b-svg
+						use(xlink:href="#{modulePath}/contact/images/contact.svg#icon-letter" fill="#fff")
+				.b-title EMAIL
+				.b-text
+					|hello@codecafe.com
+					br
+					|Personal@codecafe.com
+			.b-service__item
+				.b-media
+					img(src='#{modulePath}/contact/images/item2.jpg' alt='').b-media__img
+					svg.b-svg
+						use(xlink:href="#{modulePath}/contact/images/contact.svg#icon-point" fill="#fff")
+				.b-title OUR OFFICE
+				.b-text
+					|240 Bhatikhana, 8200 Barisal Bangladesh
+			.b-service__item
+				.b-media
+					img(src='#{modulePath}/contact/images/item3.jpg' alt='').b-media__img
+					svg.b-svg
+						use(xlink:href="#{modulePath}/contact/images/contact.svg#icon-phone" fill="#fff")
+				.b-title PHONE
+				.b-text
+					|+00 11 66 99 66 44
+					br
+					|11 99 66 44 065

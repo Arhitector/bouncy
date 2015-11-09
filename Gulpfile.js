@@ -38,6 +38,9 @@ gulp.task('js', function () {
 gulp.task('imagemin', function () {
 	return require('./gulp/imagemin-task')();
 });
+gulp.task('responsive', function () {
+	return require('./gulp/responsive')();
+});
 gulp.task('sprite', function () {
 	return require('./gulp/sprite-task')();
 });
@@ -86,11 +89,20 @@ gulp.task('fonts', function () {
 		.pipe(gulp.dest(cfg.dest.fonts))
 });
 gulp.task('pre-commit', [cfg.cssBuilder, cfg.htmlCompiler, 'js', 'imagemin'], function (cb) {
-	// add validation tasks
 	console.log('pre-commit: ok');
 	cb();
 	//gulp.start(cssBuilder);
 });
+
+
+var mainBowerFiles = require('main-bower-files');
+gulp.task('replaceBower', function() {
+	return gulp.src(mainBowerFiles())
+		.pipe(print(file))
+		.pipe(gulp.dest(cfg.src.vendor))
+});
+
+
 gulp.task('default', [cfg.cssBuilder, cfg.htmlCompiler, 'js', 'imagemin'], function () {
 	gulp.start('watch');
 });

@@ -1,0 +1,66 @@
+.m-latest-news {
+	&:extend(.helper-bg-fixed);
+	background-image: url("@{modules-path}/latest-news/images/bg.jpg");
+	padding: 74px 0 100px;
+	.g-title {
+		max-width: 1170px;
+		margin: 0 auto 94px;
+		text-align: left;
+		padding: 0 15px;
+		&__big {
+			color: @light-color;
+			.font-SS();
+			font-size: 20px;
+		}
+		&__small {
+			max-width: 470px;
+			text-align: left;
+			margin: 0;
+			color: @text-color3;
+			font-size: 14px;
+		}
+	}
+	.swiper-container {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0 0 0 70px;
+	}
+	.b-title {
+		color: @light-color2;
+		font-size: 20px;
+		letter-spacing: 0.9px;
+		margin-bottom: 6px;
+	}
+	.b-autor {
+		color: @text-color;
+		.font-SS();
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+		padding-bottom: 13px;
+		&__name {
+			color: @theme-color;
+			font-style: italic;
+		}
+	}
+	.b-tip {
+		color: @text-color2;
+		.font-SS();
+		font-size: 14px;
+		letter-spacing: 1.2px;
+		padding-bottom: 50px;
+	}
+	.b-text {
+		color: @text-color;
+		.font-M();
+		font-size: 16px;
+		line-height: 25px;
+		max-width: 586px;
+		letter-spacing: 0.6px;
+		padding-bottom: 41px;
+	}
+	.b-readme {
+		color: @text-color3;
+		font-size: 16px;
+	}
+}

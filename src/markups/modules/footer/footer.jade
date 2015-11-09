@@ -1,2 +1,19 @@
-- var data = getData('/modules/footer/footer.json')
-.copyright #{data.copyrightText}
+.m-footer
+	.m-footer__title BOUNCY
+	.m-footer__copyright Copyright 2015. All rights Reserved
+	.b-social
+		a(href="javascript:void(0);" title="").b-social__item
+			svg.b-facebook
+				use(xlink:href="#{imgPath}/common.svg#icon-facebook")
+		a(href="javascript:void(0);" title="").b-social__item
+			svg.b-twitter
+				use(xlink:href="#{imgPath}/common.svg#icon-twitter")
+		a(href="javascript:void(0);" title="").b-social__item
+			svg.b-linkedin
+				use(xlink:href="#{imgPath}/common.svg#icon-linkedin")
+		a(href="javascript:void(0);" title="").b-social__item
+			svg.b-instagram
+				use(xlink:href="#{imgPath}/common.svg#icon-instagram")
+		a(href="javascript:void(0);" title="").b-social__item
+			svg.b-vimeo
+				use(xlink:href="#{imgPath}/common.svg#icon-vimeo")
