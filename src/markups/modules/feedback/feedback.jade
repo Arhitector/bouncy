@@ -1,0 +1,9 @@
+include ../../blocks/title/title
+section.m-feed-back(bg-controller="feedbackCtrl")
+	form.l-feed-back(name="feedBack" novalidate ng-submit="validateFeedBack(feedBack)" action="get")
+		input(type="text"  name="username"  id="username"   value="" ng-model="feedbackName"    placeholder="Your name"     min="3" max="18" pattern="[a-zA-Z0-9]+" title="type your name" required).m-feed-back__name
+		input(type="email" name="email"     id="email"      value="" ng-model="feedbackEmail"   placeholder="Email address"                        title="type your email adress" required).m-feed-back__email
+		input(type="text"  name="text"      id="subject"    value="" ng-model="feedbackSubject" placeholder="Subject"       min="3" max="68" pattern="[a-zA-Z0-9\\s]+" title="type your subject" ).m-feed-back__subject
+		textarea(required name="text" ng-model="feedbackText" title="type your message text" min="10" maxlength="4096").m-feed-back__textarea
+		input(type="submit" name="submit" value="submit now"  ng-disabled="feedBack.$invalid").m-feed-back__submit
+script(src='modules/feedback/feedback.js')

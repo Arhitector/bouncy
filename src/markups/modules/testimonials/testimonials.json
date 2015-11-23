@@ -1,0 +1,31 @@
+{
+  "title": "Testimonials",
+  "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+  "testimonials": [
+	{
+	  "avatar": "../src/images/temp/avatar.png",
+	  "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.",
+	  "author": "PARTHO",
+	  "status":"FOUNDER, ARTWAYS BD"
+	},
+	{
+	  "avatar": "../src/images/temp/avatar.png",
+	  "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.",
+	  "author": "PARTHO",
+	  "status":"FOUNDER, ARTWAYS BD"
+	},
+	{
+	  "avatar": "../src/images/temp/avatar.png",
+	  "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.",
+	  "author": "PARTHO",
+	  "status":"FOUNDER, ARTWAYS BD"
+	},
+	{
+	  "avatar": "../src/images/temp/avatar.png",
+	  "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.",
+	  "author": "PARTHO",
+	  "status":"FOUNDER, ARTWAYS BD"
+	}
+  ]
+
+}

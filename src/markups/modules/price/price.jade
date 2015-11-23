@@ -1,34 +1,15 @@
 include ../../blocks/title/title
-section.m-price
+section.m-price(ng-controller="priceCtrl")
 	.l-price
-		-var title = {title: 'Our price', subtitle: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}
-		+title(title)
+		+title()
 		.b-cost
-			.b-cost__item
-				.b-title PREMIUM
-				.b-description
-					.b-description__large $ 60
-					|Per Month
-			.b-cost__item
+			.b-cost__item(ng-repeat="item in priceData.propose")
 				.b-title
-					|Let’s Start
-					svg.b-svg
-						//#{imgPath}
+					|{{item.title}}
+					svg.b-svg(ng-show="item.titleArrow")
 						use(xlink:href="../src/images/common.svg#arrow")
-				.b-description
-					|Full Branding
-					br
-					|Project Management
-					br
-					|Unlimited Revisions
-					br
-					|24/7 h Service
-					br
-					|Free Domain
-					br
-					|Free Hosting
-			.b-cost__item
-				.b-title EXCLUSIVE
-				.b-description
-					.b-description__large $ 80
+				.b-description(ng-show="item.price")
+					.b-description__large {{item.price | currency : "$" : 0}}
 					|Per Month
+				.b-description(ng-show="item.text" ng-bind-html="item.text")
+script(src='modules/price/price.js')

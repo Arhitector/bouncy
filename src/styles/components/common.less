@@ -40,8 +40,18 @@ p {
 .wrapper {
 	max-width: 1920px;
 	margin: 0 auto;
+	.swiper-pagination {
+		&-bullet {
+			background-color: transparent;
+			border: 1px solid @theme-color;
+			opacity: 1;
+			cursor: pointer;
+			&-active {
+				background-color: @theme-color;
+			}
+		}
+	}
 }
-.content {}
 .helper-title {
 	.font-SS();
 	color: #333b46;

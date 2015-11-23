@@ -1,34 +1,78 @@
 {
   "title": "Our Services",
   "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
-  "items":{
+  "items": {
 	"tools": {
 	  "title": "Using Tools",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
-	  "branding": "70",
-	  "webDesign": "48",
-	  "uiUx": "90"
+	  "skills": [
+		{
+		  "title":"branding",
+		  "text": "70"
+		},
+		{
+		  "title": "Web Design",
+		  "text": "48"
+		},
+		{
+		  "title": "UI/UX",
+		  "text": "90"
+		}
+	  ]
 	},
 	"paint": {
 	  "title": "Graphic Design",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
-	  "branding": "60",
-	  "webDesign": "75",
-	  "uiUx": "86"
+	  "skills": [
+		{
+		  "title":"branding",
+		  "text": "60"
+		},
+		{
+		  "title": "Web Design",
+		  "text": "75"
+		},
+		{
+		  "title": "UI/UX",
+		  "text": "86"
+		}
+	  ]
 	},
 	"game": {
 	  "title": "Modern Featchers",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
-	  "branding": "38",
-	  "webDesign": "94",
-	  "uiUx": "82"
+	  "skills": [
+		{
+		  "title":"branding",
+		  "text": "38"
+		},
+		{
+		  "title": "Web Design",
+		  "text": "94"
+		},
+		{
+		  "title": "UI/UX",
+		  "text": "82"
+		}
+	  ]
 	},
 	"set": {
 	  "title": "Our technick",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
-	  "branding": "67",
-	  "webDesign": "87",
-	  "uiUx": "97"
+	  "skills": [
+		{
+		  "title":"branding",
+		  "text": "67"
+		},
+		{
+		  "title": "Web Design",
+		  "text": "87"
+		},
+		{
+		  "title": "UI/UX",
+		  "text": "97"
+		}
+	  ]
 	}
   }
 }

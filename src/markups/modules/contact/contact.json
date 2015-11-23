@@ -1,0 +1,9 @@
+{
+  "title": "Contact us",
+  "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+  "contacts": {
+	"email": "hello@codecafe.com <br />Personal@codecafe.com",
+	"adress":"240 Bhatikhana, 8200 Barisal Bangladesh",
+	"phone":"+00 11 66 99 66 44<br />11 99 66 44 065"
+  }
+}

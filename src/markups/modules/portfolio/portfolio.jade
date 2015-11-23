@@ -1,33 +1,21 @@
 include ../../blocks/title/title
-section.m-portfolio#m-portfolio
+section.m-portfolio#m-portfolio(ng-controller="portfolioCtrl")
 	.l-portfolio
-		-var title = {title: 'THE PORTFOLIO', subtitle: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}
-		+title(title)
+		+title()
 		.b-filter
 			.b-filter__envelope
-				.b-item.active all works
-				.b-item print
-				.b-item Identity
-				.b-item Branding
-				.b-item Web
-				.b-item HTML
-				.b-item Wordpress
+				.b-list
+					.b-list__item(ng-repeat="item in portfolioData.filters" ng-bind="item.item" ng-click="clickWork(item.item, $event)")
 		.b-works
-			each item in data.portfolio
-				.b-works__item
-					.b-media
-						img(src='#{item.img}' alt='').b-media__img
-					.b-tip
-						.b-tip__title #{item.title}
-						.b-tip__discription #{item.discription}
-						.b-tip__link #{item.link}
-						.b-tip__like
-
+			.b-works__item(ng-repeat="work in portfolioData.portfolio | filter: selectedItems | limitTo : 12" )
+				.b-media
+					img(ng-src="{{work.img}}" alt='').b-media__img
+				.b-tip
+					.b-tip__title {{work.title}}
+					.b-tip__discription {{work.discription}}
+					a(href="{{work.link}}" title="" target="_blank").b-tip__link
+					.b-tip__like
 		.b-footer
-			.b-footer__text
-				|At vero eos et
-				b accusamus
-				|et iusto odio
-				b dignissimos
-				|ducimus qui blanditiis
-			.b-footer__button start project
+			.b-footer__text(ng-bind-html="portfolioData.text")
+			.b-footer__button(ng-bind="portfolioData.button")
+script(src='modules/portfolio/portfolio.js')

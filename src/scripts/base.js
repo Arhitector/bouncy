@@ -1,8 +1,4 @@
-var bouncyApp = angular.module("bouncyApp", []);
-
-bouncyApp.controller("bouncyAppCtrl", function($scope, $http){
-
-});
+var bouncyApp = angular.module("bouncyApp",['ngSanitize']);
 
 bouncyApp.factory('jsonLoader', ['$http', '$q', function ($http, $q) {
 	return function (jsonPath) {
@@ -16,11 +12,10 @@ bouncyApp.factory('jsonLoader', ['$http', '$q', function ($http, $q) {
 				});
 		});
 	};
-}]);
+}])
 
-
-bouncyApp.factory('scrollPosition', function () {
-		var appHeight = $('body').height() - $(window).height();
+.factory('scrollPosition', function () {
+		var appHeight = $('body').height();
 		return {
 			appHeight: function () {
 				return appHeight;
@@ -39,9 +34,8 @@ bouncyApp.factory('scrollPosition', function () {
 				return $(window).height();
 			}
 		}
-	}
-);
-bouncyApp.directive("scroll", function ($window, scrollPosition) {
+})
+.directive("scroll", function ($window, scrollPosition) {
 	return function(scope, element, attrs) {
 		angular.element($window).bind("scroll", function() {
 			scope.topPosScroll = false;
@@ -57,4 +51,30 @@ bouncyApp.directive("scroll", function ($window, scrollPosition) {
 			scope.$apply();
 		});
 	};
+})
+.directive("clickActive", function () {
+	return {
+		link: function (scope, element, attributes) {
+			element.children().bind({
+				click: function (e) {
+					element.children().removeClass("active");
+					angular.element(e.target).addClass("active");
+				}
+			});
+			var arrayAttr = attributes["clickActive"];
+			var onFirstShow = scope;
+			/*for(item in arrayAttr){
+				var onFirstShow = onFirstShow[arrayAttr[item]];
+			};*/
+			//console.log(scope.$parent);
+		},
+		restrickt: "A"
+	}
 });
+/*
+window.onload = function () {
+	var mySwiper = new Swiper ('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true
+	})
+};*/

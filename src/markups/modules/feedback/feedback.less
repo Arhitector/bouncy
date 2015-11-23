@@ -13,19 +13,23 @@
 		flex: 1 100%;
 	}
 	&__name {
+		&:extend(.m-feed-back .helper-field all);
 		&:extend(.m-feed-back .helper-item all);
 	}
 	&__email {
+		&:extend(.m-feed-back .helper-field all);
 		&:extend(.m-feed-back .helper-item all);
 		margin-left: 38px;
 	}
 	&__subject {
+		&:extend(.m-feed-back .helper-field all);
 		&:extend(.m-feed-back .helper-item all);
 		margin-left: 38px;
 	}
 	&__textarea {
 		flex: 1 100%;
 		border: 1px solid @border;
+		&:extend(.m-feed-back .helper-field all);
 		&:extend(.m-feed-back .helper-form all);
 		height: 190px;
 		resize: none;
@@ -41,11 +45,15 @@
 		padding-top: 5px;
 		background-color: @theme-color;
 		border: 1px solid @theme-color;
+		cursor: pointer;
+		&:disabled {
+			background-color: lighten(@theme-color, 20%);
+			cursor: no-drop;
+		}
 	}
 	.helper-item {
 		&:extend(.m-feed-back .helper-form all);
 		flex: 1;
-		padding: 0 22px;
 		color: @text-color3;
 		font-size: 14px;
 		border: 1px solid @border;
@@ -53,7 +61,24 @@
 		height: 41px;
 		font-size: 14px;
 	}
+	.helper-field {
+		&.ng-invalid {
+			&:not(.ng-pristine) {
+				border-color: #f00;
+				color: #f00;
+			}
+		}
+		&.ng-valid {
+			&:not(.ng-pristine) {
+				border-color: @theme-color;
+			}
+		}
+		&:-webkit-autofill {
+			animation: reset-input 0.1ms forwards;
+		}
+	}
 	.helper-form {
+		padding: 0 22px;
 		line-height: 39px;
 		display: block;
 		box-sizing: border-box;
@@ -85,5 +110,10 @@
 			order: 2;
 			margin-left: 0;
 		}
+	}
+}
+@keyframes reset-input {
+	100% {
+		background-color: transparent;
 	}
 }

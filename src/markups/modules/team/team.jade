@@ -1,46 +1,31 @@
 include ../../blocks/title/title
-section.m-team#m-team
+section.m-team#m-team(ng-controller="teamCtrl")
 	.l-team
-		-var title = {title: 'The team', subtitle: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium'}
-		+title(title)
+		+title()
 		.swiper-container
 			.swiper-wrapper
-				- for (i=0; i<3; i++) {
-					.swiper-slide
-						.b-media
-							img(src='#{tempPath}/team1.jpg' alt='').b-media__img
-							.b-social
-								a(href="javascript:void(0);").b-social__item
-									svg.b-instagram
-										use(xlink:href='#{imgPath}/common.svg#icon-instagram')
-								a(href="javascript:void(0);").b-social__item
-									svg.b-facebook
-										use(xlink:href="#{imgPath}/common.svg#icon-facebook")
-								a(href="javascript:void(0);").b-social__item
-									svg.b-twitter
-										use(xlink:href="#{imgPath}/common.svg#icon-twitter")
-						.b-info
-							.b-info__name Abdullah Noman
-							.b-info__post Creative Director, Code Cafe
-							.b-info__discription At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-							- var skills = {"branding": "80", "web design": "65", "user interface": "75"}
-							each item, key in skills
-								.b-skills
-									.b-skills__tip #{key}
-									progress.b-skills__progress(max="100" value="#{item}")
-				- }
+				.swiper-slide(ng-repeat="person in teamData.team")
+					.b-media
+						img(ng-src='{{person.photo}}' alt='').b-media__img
+						.b-social
+							a(href="{{person.links.in}}" target="_blank").b-social__item
+								svg.b-instagram
+									use(xlink:href='#{imgPath}/common.svg#icon-instagram')
+							a(href="{{person.links.fb}}" target="_blank").b-social__item
+								svg.b-facebook
+									use(xlink:href="#{imgPath}/common.svg#icon-facebook")
+							a(href="{{person.links.tw}}" target="_blank").b-social__item
+								svg.b-twitter
+									use(xlink:href="#{imgPath}/common.svg#icon-twitter")
+					.b-info
+						.b-info__name(ng-bind="person.name")
+						.b-info__post(ng-bind="person.post")
+						.b-info__discription(ng-bind="person.text")
+						.b-skills(ng-repeat="(key, value) in person.skils")
+							.b-skills__tip(ng-bind="key")
+							progress.b-skills__progress(max="100" value="{{value}}")
 			.swiper-pagination
 	.b-contact
-		.b-contact__text Already Loved Us? Let’s talk!
-		.b-contact__button contact us
-	script(src="../src/vendor/swiper/swiper.min.js")
-	script(src="../src/vendor/swiper/swiper.jquery.min.js")
-	script.
-		window.onload = function () {
-			var mySwiper = new Swiper ('.swiper-container', {
-				// Optional parameters
-				direction: 'horizontal',
-				pagination: '.swiper-pagination',
-				loop: true
-			})
-		};
+		.b-contact__text(ng-bind="teamData.footerText")
+		.b-contact__button(ng-bind="teamData.footerButton")
+script(src="../src/markups/modules/team/team.js")

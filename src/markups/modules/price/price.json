@@ -1,0 +1,17 @@
+{
+  "title": "Our price",
+  "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+  "propose": [
+	{
+	  "title":"PREMIUM",
+	  "price":"60"
+	},{
+	  "title":"Let’s Start",
+	  "titleArrow": true,
+	  "text": "Full Branding<br />Project Management<br />Unlimited Revisions<br />24/7 h Service<br />Free Domain<br />Free Hosting"
+	},{
+	  "title":"EXCLUSIVE",
+	  "price":"80"
+	}
+  ]
+}

@@ -1,77 +1,140 @@
 {
+  "title": "THE PORTFOLIO",
+  "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+  "text":"At vero eos et <b> accusamus</b> et iusto odio <b>dignissimos</b> ducimus qui blanditiis",
+  "button":"start project",
+  "filters":[
+	{
+	  "item":"all words"
+	},
+	{
+	  "item":"print"
+	},
+	{
+	  "item":"Identity"
+	},
+	{
+	  "item":"Branding"
+	},
+	{
+	  "item":"Web"
+	},
+	{
+	  "item":"HTML"
+	},
+	{
+	  "item":"Wordpress"
+	}
+  ],
   "portfolio": [
 	{
 	  "img": "../src/markups/modules/portfolio/images/work1.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"print", "Identity","Branding","Web","HTML","Wordpress"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work2.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
-	}
-  ,
+	  "link": "http://google.com",
+	  "dataLink": [
+		"Branding","Web","HTML"
+	  ]
+	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work3.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"print", "Identity","Branding"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work4.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"print", "Identity","HTML"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work5.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"Branding","Web"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work6.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"Branding","HTML"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work7.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"Web","HTML","Wordpress"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work8.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"print", "Identity","HTML"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work9.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"print", "Web","HTML"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work10.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"Web","HTML","Wordpress"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work11.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"print","Wordpress"
+	  ]
 	},
 	{
 	  "img": "../src/markups/modules/portfolio/images/work12.jpg",
 	  "title": "title here",
 	  "discription": "At vero eos et accusamus et iusto odio dignissimos ducimus qui",
-	  "link": "http://google.com"
+	  "link": "http://google.com",
+	  "dataLink": [
+		"print", "HTML","Wordpress"
+	  ]
 	}
+
   ]
 }

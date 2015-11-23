@@ -27,6 +27,7 @@ all vendor's stuff should be in dev dependencies
 - make shure that all main library was instaled (see "important" point)
 - reinstall all packages by command npm install
 
+- filter portfolio
 
 
 
@@ -36,7 +37,6 @@ all vendor's stuff should be in dev dependencies
 - mix-blend-mode
 - background-blend-mode
 - hover effect menu for mobile
-- buttons top/down scroll to 1 viewport
 - flex element
 - vw vh
 - filter grayscale

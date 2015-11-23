@@ -2,37 +2,21 @@ include ../../blocks/title/title
 section.m-services#m-services(ng-controller="servicesCtrl")
 	+title()
 	.l-service
-		.b-media
+		.b-media(click-active)
 			.b-media__tools(ng-click="clickServices(['items', 'tools'])")
 			.b-media__paint(ng-click="clickServices(['items', 'paint'])")
 			.b-media__game(ng-click="clickServices(['items', 'game'])")
 			.b-media__set(ng-click="clickServices(['items', 'set'])")
 		.b-description
 			.b-description__title(ng-bind="servicesItemData.title")
-			.b-description__text(ng-bind="servicesItemData.text")
+			.b-description__text(ng-bind-html="servicesItemData.text")
 		.l-counter
-			.b-counter
-				svg.b-svg
-					circle.b-svg__circle
-					circle.b-svg__sector(ng-style="{'stroke-dasharray' : svgLengthCircle, 'stroke-dashoffset' : svgPathTextPath}")
-					text(x="34%" y="48%" fill="#81858d").b-svg__text
-						tspan(ng-bind="servicesItemData.uiUx").b-percent
-						tspan(x='58%' style="font-size: 14px;").b-percent__sign %
-				.b-counter__tip UI/UX
-			.b-counter
+			.b-counter(ng-repeat="skill in servicesItemData.skills")
 				svg.b-svg
 					circle.b-svg__circle
 					circle.b-svg__sector
 					text(x="34%" y="48%" fill="#81858d").b-svg__text
-						tspan(ng-bind="servicesItemData.webDesign").b-percent
+						tspan(ng-bind="skill.text").b-percent
 						tspan(x='58%' style="font-size: 14px;").b-percent__sign %
-				.b-counter__tip Web Design
-			.b-counter
-				svg.b-svg
-					circle.b-svg__circle
-					circle.b-svg__sector
-					text(x="34%" y="48%" fill="#81858d").b-svg__text
-						tspan(ng-bind="servicesItemData.branding").b-percent
-						tspan(x='58%' style="font-size: 14px;").b-percent__sign %
-				.b-counter__tip Branding
+				.b-counter__tip(ng-bind="skill.title")
 script(src="#{modulePath}/services/services.js")

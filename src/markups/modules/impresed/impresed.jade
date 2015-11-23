@@ -1,12 +1,12 @@
-section.m-impresed
+section.m-impresed(ng-controller="impresedCtrl")
 	.l-impresed
 		.b-side
-			.b-side__title Impressed ?
-			.b-side__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-			.b-side__autor - Abdullah Noman
+			.b-side__title(ng-bind="impresedData.title")
+			.b-side__text(ng-bind="impresedData.quote.text")
+			.b-side__autor(ng-bind-template=" - {{impresedData.quote.author}}")
 			.b-side__post
-				|Creatice Director,
-				a(href="javascript:void(0);" title="") &nbsp;Code Cafe
+				|{{impresedData.quote.post}}, {{impresedData.quote.author}}
+				cite(ng-bind="impresedData.quote.referal")
 		.b-media
 			.b-text
 				.b-text__item b
@@ -16,3 +16,4 @@ section.m-impresed
 				.b-text__item c
 				.b-text__item y
 			img(src='#{modulePath}/impresed/images/monitor.png' alt='')
+script(src='modules/impresed/impresed.js')

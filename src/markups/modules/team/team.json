@@ -1,0 +1,40 @@
+{
+  "title": "The team",
+  "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+  "team": [
+	{
+	  "photo": "../src/images/temp/team1.jpg",
+	  "links": {
+		"in":"http://instagram.com",
+		"fb":"http://facebook.com",
+		"tw":"http://twitter.com"
+	  },
+	  "name":"Abdullah Noman",
+	  "post": "Creative Director, Code Cafe",
+	  "text":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+	  "skils": {
+		"brandings":"80",
+		"web design":"65",
+		"user interface": "75"
+	  }
+	},
+	{
+	  "photo": "../src/images/temp/team1.jpg",
+	  "links": {
+		"in":"http://instagram.com",
+		"fb":"http://facebook.com",
+		"tw":"http://twitter.com"
+	  },
+	  "name":"Abdullah Noman",
+	  "post": "Creative Director, Code Cafe",
+	  "text":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+	  "skils": {
+		"brandings":"80",
+		"web design":"65",
+		"user interface": "75"
+	  }
+	}
+  ],
+  "footerText":"Already Loved Us? Let’s talk!",
+  "footerButton":"contact us"
+}

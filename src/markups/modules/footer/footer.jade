@@ -1,19 +1,20 @@
-.m-footer
+.m-footer(ng-controller="footerCtrl")
 	.m-footer__title BOUNCY
 	.m-footer__copyright Copyright 2015. All rights Reserved
 	.b-social
-		a(href="javascript:void(0);" title="").b-social__item
+		a(href="{{footerData.links.fb}}" title="" target="_blank").b-social__item
 			svg.b-facebook
 				use(xlink:href="#{imgPath}/common.svg#icon-facebook")
-		a(href="javascript:void(0);" title="").b-social__item
+		a(href="{{footerData.links.tw}}" title="" target="_blank").b-social__item
 			svg.b-twitter
 				use(xlink:href="#{imgPath}/common.svg#icon-twitter")
-		a(href="javascript:void(0);" title="").b-social__item
+		a(href="{{footerData.links.ln}}" title="" target="_blank").b-social__item
 			svg.b-linkedin
 				use(xlink:href="#{imgPath}/common.svg#icon-linkedin")
-		a(href="javascript:void(0);" title="").b-social__item
+		a(href="{{footerData.links.ig}}" title="" target="_blank").b-social__item
 			svg.b-instagram
 				use(xlink:href="#{imgPath}/common.svg#icon-instagram")
-		a(href="javascript:void(0);" title="").b-social__item
+		a(href="{{footerData.links.vm}}" title="" target="_blank").b-social__item
 			svg.b-vimeo
 				use(xlink:href="#{imgPath}/common.svg#icon-vimeo")
+script(src='modules/footer/footer.js')

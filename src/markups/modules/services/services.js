@@ -13,12 +13,18 @@ bouncyApp.controller('servicesCtrl', function ($scope, $timeout, jsonLoader) {
 		}
 		$scope.servicesItemData = servicesItemData;
 
-		svgPathTextValue = 70;
-		svgRadiusCircle = 60;
-		lengthRadius = 2*Math.PI*svgRadiusCircle;
-		lengthPath = -lengthRadius + svgPathTextValue /100 * lengthRadius;
-		$scope.svgLengthCircle = lengthRadius;
-		$scope.svgPathTextPath = lengthPath;
+		angular.forEach(angular.element(".b-counter"), function( value, key, $scope){
+			var currentElement = angular.element(value);
+			var svgPathTextValue = currentElement.find('.b-percent').html();
+			var svgRadiusCircle = 60;
+			lengthRadius = 2*Math.PI*svgRadiusCircle;
+			lengthPath = -lengthRadius + svgPathTextValue /100 * lengthRadius;
+			//$scope.svgLengthCircle = lengthRadius;
+			//$scope.svgPathTextPath = lengthPath;
+			angular.element(value).find('.b-svg__sector').css("stroke-dasharray",lengthRadius);
+			angular.element(value).find('.b-svg__sector').css("stroke-dashoffset",lengthPath);
+		});
+
 	};
 });
 
@@ -29,7 +35,7 @@ Services.prototype = new Core();
 Services.prototype.percentIncrement = function () {
 	var increment = 00;
 	var stopIncrement = this.svgPathTextValue;
-	var incrementSelector = this.svgPathText;
+	var incrementSelector = this.svgPathTextg;
 
 	var timer = setInterval(function() {
 		if (increment < stopIncrement) {

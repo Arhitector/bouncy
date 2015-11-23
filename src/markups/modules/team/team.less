@@ -3,7 +3,7 @@
 	.l-team {
 		display: flex;
 		flex-flow: column wrap;
-		margin: 0 auto 168px;
+		margin: 0 auto 96px;
 		max-width: 1058px;
 		padding: 0 15px;
 		box-sizing: border-box;
@@ -15,6 +15,12 @@
 	}
 	.swiper-container {
 		width: 100%;
+		padding-bottom: 72px;
+	}
+	.swiper-container-horizontal {
+		& > .swiper-pagination {
+			bottom: 0;
+		}
 	}
 	.swiper-wrapper {}
 	.swiper-slide {
@@ -22,17 +28,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-end;
-	}
-	.swiper-pagination {
-		&-bullet {
-			background-color: transparent;
-			border: 1px solid @theme-color;
-			opacity: 1;
-			cursor: pointer;
-			&-active {
-				background-color: @theme-color;
-			}
-		}
 	}
 	.b-media {
 		max-width: 286px;
