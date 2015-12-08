@@ -2,7 +2,7 @@ include ../../blocks/title/title
 section.m-team#m-team(ng-controller="teamCtrl")
 	.l-team
 		+title()
-		.swiper-container
+		.swiper-container.js-team-swiper
 			.swiper-wrapper
 				.swiper-slide(ng-repeat="person in teamData.team")
 					.b-media
