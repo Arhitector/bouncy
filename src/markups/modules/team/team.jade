@@ -24,7 +24,7 @@ section.m-team#m-team(ng-controller="teamCtrl")
 						.b-skills(ng-repeat="(key, value) in person.skils")
 							.b-skills__tip(ng-bind="key")
 							progress.b-skills__progress(max="100" value="{{value}}")
-			.swiper-pagination
+			.swiper-pagination.js-team-pagination
 	.b-contact
 		.b-contact__text(ng-bind="teamData.footerText")
 		.b-contact__button(ng-bind="teamData.footerButton")

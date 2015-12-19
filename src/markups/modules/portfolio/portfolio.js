@@ -5,6 +5,8 @@ bouncyApp.controller("portfolioCtrl", function ($scope, jsonLoader) {
 		$scope.portfolioData = data;
 		$scope.model = data;
 	});
+	$scope.currentFilter = 'all words';
+
 	$scope.clickWork = function (elm, $event) {
 		$scope.currentFilter = elm;
 		angular.element('.b-list__item').removeClass('active');

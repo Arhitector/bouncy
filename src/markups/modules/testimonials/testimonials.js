@@ -8,7 +8,7 @@ bouncyApp.controller("testimonialsCtrl", function ($scope, jsonLoader, $timeout)
 	$timeout(function () {
 		//DOM has finished rendering
 		var mySwiper = new Swiper ('.js-swiper-testimonial', {
-			pagination: '.swiper-pagination',
+			pagination: '.js-testimonial-pagination',
 			paginationClickable: true
 		});
 	});

@@ -8,10 +8,34 @@
 		background-color: @light-color;
 		max-width: 1170px;
 		margin: 0 auto;
-		padding: 50px 100px 116px;
+		padding: 50px 0;
 		box-sizing: border-box;
+		position: relative;
+		&:before, &:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 100px;
+			pointer-events: none;
+			z-index: 10;
+		}
+		&:before {
+			left: 0;
+			background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1));
+		}
+		&:after {
+			right: 0;
+			background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0)); 
+		}
+	}
+	.swiper-container {
+		padding-bottom: 66px;
 	}
 	.swiper-slide {
+		padding: 0 100px;
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;

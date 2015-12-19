@@ -1,17 +1,33 @@
+//-break points
+@screen-xs-min: 320px;
+@screen-s-min: 480px;
+@screen-m-min: 768px;
+@screen-l-min: 960px;
+@screen-xl-min: 1170px;
+
+
+@extra-small: @extra-small-up and @extra-small-down;
+@extra-small-down: ~"(max-width:" @screen-xs-min ~")";
+@extra-small-up: ~"(min-width:" @screen-s-min ~")";
+
+@small: @small-up and @small-down ;
+@small-down: ~"(max-width:" @screen-m-min ~")";
+@small-up: ~"(min-width:" (@screen-s-min - 1px) ~")";
+
+@medium: @medium-up and @medium-down ;
+@medium-down: ~"(max-width:" @screen-l-min ~")";
+@medium-up: ~"(min-width:" (@screen-m-min - 1px) ~")";
+
+@large: @large-up and @large-down ;
+@large-down: ~"(max-width:" @screen-xl-min ~")";
+@large-up: ~"(min-width:" (@screen-l-min - 1px) ~")";
+
+@extra-large: @extra-large-up and all ;
+@extra-large-up: ~"(min-width:" (@screen-xl-min - 1px) ~")";
+
 //- Hide block
 .hide() {
 	display: none;
-}
-//- reset margin & padding
-.mpn (){
-	margin: 0;
-	padding: 0;
-}
-//- reset ul
-.ul(@mar: 0, @pad: 0){
-	list-style: none;
-	margin: @mar * 1px;
-	padding: @pad * 1px;
 }
 //- Size
 .size(@width, @height) {
@@ -30,6 +46,7 @@
 .height(@varHeight) {
 	height: percentage(@varHeight/@base-font-size);
 }
+
 .va (@width, @height) {
 	.size(@width * 1px, @height * 1px);
 	.va {
@@ -46,11 +63,17 @@
 	overflow: hidden;
 	width: @width;
 }
-.pseudo (@width, @height, @content: '') {
-	position: absolute;
-	content: @content;
-	width: @width * 1px;
-	height: @height * 1px;
+.justify () {
+	text-align: justify;
+	text-align-last: justify;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 0;
+		visibility: hidden;
+		overflow: hidden;
+	}
 }
 //- gradient
 .grad (@startcolor, @endcolor, @direction: to top) {

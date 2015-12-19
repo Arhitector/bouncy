@@ -12,7 +12,7 @@ bouncyApp.controller("teamCtrl", function ($scope, jsonLoader, $timeout) {
 	$timeout(function () {
 		//DOM has finished rendering
 		var mySwiper = new Swiper ('.js-team-swiper', {
-			pagination: '.swiper-pagination',
+			pagination: '.js-team-pagination',
 			paginationClickable: true
 		});
 	});

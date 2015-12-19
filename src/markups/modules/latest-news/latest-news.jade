@@ -1,6 +1,6 @@
 section.m-latest-news#m-latest-news(ng-controller="latestNewsCtrl")
 	+title()
-	.swiper-container
+	.swiper-container.js-swiper-latest-news
 		.swiper-wrapper
 			.swiper-slide(ng-repeat="item in latestNewsData.news")
 				.b-title(ng-bind="item.title")
@@ -10,5 +10,5 @@ section.m-latest-news#m-latest-news(ng-controller="latestNewsCtrl")
 				.b-tip(ng-bind="item.tip")
 				.b-text(ng-bind="item.text")
 				.b-readme(ng-bind="item.button")
-		.swiper-pagination
+		.swiper-pagination.js-latest-news-pagination
 script(src='modules/latest-news/latest-news.js')

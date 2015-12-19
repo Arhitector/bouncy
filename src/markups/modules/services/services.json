@@ -1,8 +1,8 @@
 {
   "title": "Our Services",
   "subTitle": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
-  "items": {
-	"tools": {
+  "items": [
+	{
 	  "title": "Using Tools",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
 	  "skills": [
@@ -20,7 +20,7 @@
 		}
 	  ]
 	},
-	"paint": {
+	{
 	  "title": "Graphic Design",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
 	  "skills": [
@@ -38,7 +38,7 @@
 		}
 	  ]
 	},
-	"game": {
+	{
 	  "title": "Modern Featchers",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
 	  "skills": [
@@ -56,7 +56,7 @@
 		}
 	  ]
 	},
-	"set": {
+	{
 	  "title": "Our technick",
 	  "text": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>",
 	  "skills": [
@@ -74,5 +74,5 @@
 		}
 	  ]
 	}
-  }
+  ]
 }

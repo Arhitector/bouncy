@@ -4,15 +4,12 @@ bouncyApp.controller('datailsCtrl', function ($scope, $timeout, jsonLoader) {
 	jsonLoader(detailsModel).then(function (data) {
 		$scope.detailsData = data;
 		$scope.model = data;
-		return detailsData = $scope.detailsData;
+		$scope.contentData = $scope.detailsData.items[0];
 	});
-	$scope.switchContent = function (keyData) {
+
+	$scope.switchContent = function (index) {
 		//- get data for selected tab
-		var contentData = detailsData;
-		for(item in keyData){
-			contentData = contentData[keyData[item]];
-		};
-		$scope.contentData = contentData;
+		$scope.contentData = $scope.detailsData.items[index];
 
 		//- animation for data in tab.
 		$scope.startAnimation = true;
