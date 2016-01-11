@@ -88,6 +88,10 @@ gulp.task('fonts', function () {
 	gulp.src(cfg.src.fonts)
 		.pipe(gulp.dest(cfg.dest.fonts))
 });
+gulp.task('ico', function () {
+	gulp.src(cfg.src.img + '/*.ico')
+		.pipe(gulp.dest(cfg.dest.img))
+});
 gulp.task('pre-commit', [cfg.cssBuilder, cfg.htmlCompiler, 'js', 'imagemin'], function (cb) {
 	console.log('pre-commit: ok');
 	cb();
@@ -103,7 +107,7 @@ gulp.task('replaceBower', function() {
 });
 
 
-gulp.task('default', [cfg.cssBuilder, cfg.htmlCompiler, 'js', 'imagemin'], function () {
+gulp.task('default', [cfg.cssBuilder, cfg.htmlCompiler, 'js', 'imagemin', 'ico'], function () {
 	gulp.start('watch');
 });
 gulp.task('build', [cfg.cssBuilder, cfg.htmlCompiler, 'js', 'imagemin'], function () {

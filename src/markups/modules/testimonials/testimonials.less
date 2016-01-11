@@ -72,8 +72,14 @@
 		}
 	}
 	@media (max-width: @small-max-width) {
+		.l-testimonials {
+			&:before, &:after {
+				display: none;
+			}
+		}
 		.swiper-slide {
 			display: block;
+			padding: 0;
 		}
 		.b-media {
 			float: left;
